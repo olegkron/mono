@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Portfolio social preview placeholder</title>
+  <desc id="desc">A placeholder social preview for the portfolio template.</desc>
+  <rect width="1200" height="630" fill="#000000"/>
+  <rect x="72" y="72" width="1056" height="486" rx="36" fill="#161616" stroke="#474747" stroke-width="4"/>
+  <text x="132" y="250" fill="#ffffff" font-family="Menlo, Monaco, Consolas, monospace" font-size="78" font-weight="700">Your Name</text>
+  <text x="132" y="340" fill="#8d8d8d" font-family="Menlo, Monaco, Consolas, monospace" font-size="42">Developer Portfolio</text>
+  <rect x="132" y="418" width="240" height="18" rx="9" fill="#ff8a50"/>
+</svg>

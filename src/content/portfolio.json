@@ -1,0 +1,196 @@
+{
+  "site": {
+    "name": "Your Name",
+    "title": "Your Name - Your Role",
+    "description": "A short description of who you are and what you do.",
+    "siteUrl": "https://your-domain.com",
+    "twitterHandle": "yourhandle",
+    "locale": "en_US",
+    "theme": {
+      "showToggle": true
+    },
+    "sections": {
+      "about": { "label": "about", "isVisible": true },
+      "projects": { "label": "projects", "isVisible": true },
+      "stack": { "label": "stack", "isVisible": true },
+      "recognition": { "label": "recognition", "isVisible": true }
+    }
+  },
+  "about": [
+    { "text": "A brief description of who you are, what you build, and what makes your work interesting. Link to " },
+    { "text": "notable achievements", "href": "https://example.com" },
+    { "text": " or metrics here." }
+  ],
+  "role": "Your Role at Your Company.",
+  "stackSections": [
+    { "heading": "Core", "items": ["Product Engineering", "System Design", "UX"] },
+    { "heading": "Frontend", "items": ["React", "TypeScript", "CSS"] },
+    { "heading": "Backend", "items": ["Node.js", "PostgreSQL", "Docker"] },
+    { "heading": "Tools", "items": ["Git", "VS Code"] }
+  ],
+  "recognition": [
+    {
+      "heading": "Publications",
+      "items": [
+        { "title": "Your First Publication", "link": "https://example.com/publication", "info": "Mar. 2025" }
+      ]
+    },
+    {
+      "heading": "Speaking",
+      "items": [
+        { "title": "Speaker - Example Conference", "link": "https://example.com/conference", "info": "Jun. 2025" }
+      ]
+    },
+    {
+      "heading": "Judging",
+      "items": [
+        { "title": "Judge - Example Hackathon", "link": "https://example.com/hackathon", "info": "Sep. 2025" }
+      ]
+    }
+  ],
+  "contacts": [
+    { "title": "X / Twitter", "link": "https://x.com/yourhandle" },
+    { "title": "GitHub", "link": "https://github.com/yourhandle" },
+    { "title": "LinkedIn", "link": "https://linkedin.com/in/yourhandle" },
+    { "title": "Email", "link": "mailto:you@example.com" }
+  ],
+  "heroCards": {
+    "image": { "src": "/avatar.svg", "alt": "Your Name" },
+    "widgets": [
+      { "type": "location", "label": "London, UK" },
+      { "type": "metric", "heading": "X years", "subheading": "Your experience" },
+      { "type": "metric", "eyebrow": "Project", "heading": "$0", "subheading": "Your metric" },
+      {
+        "type": "cta",
+        "image": { "src": "/avatar.svg", "alt": "Avatar" },
+        "text": "X / Twitter",
+        "label": "Follow",
+        "href": "https://x.com/yourhandle"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Project Alpha",
+      "slug": "project-alpha",
+      "category": "dev",
+      "externalUrl": "https://example.com/project-alpha",
+      "heading": "A one-line description of what this project does.",
+      "seoDescription": "A longer description of Project Alpha, its impact, and your role.",
+      "description": [
+        { "text": "A longer description of the project, its impact, and your role. You can include " },
+        { "text": "links to metrics or demos", "href": "https://example.com" },
+        { "text": "." }
+      ],
+      "images": [
+        { "src": "", "alt": "Project Alpha screenshot placeholder" }
+      ],
+      "disciplines": ["Web Development", "UX Design"],
+      "technologies": ["React", "TypeScript", "Node.js"],
+      "featured": {
+        "isVisible": true,
+        "role": "Your Role",
+        "heading": "A short tagline describing what this project does.",
+        "description": [
+          { "text": "Key metrics or highlights about this project. Link to " },
+          { "text": "relevant data", "href": "https://example.com" },
+          { "text": " if available." }
+        ]
+      }
+    },
+    {
+      "title": "Project Beta",
+      "slug": "project-beta",
+      "category": "dev",
+      "externalUrl": "https://example.com/project-beta",
+      "heading": "Another one-line description.",
+      "seoDescription": "A description of Project Beta and what makes it interesting.",
+      "description": [{ "text": "A description of this project and what makes it interesting." }],
+      "images": [
+        { "src": "", "alt": "Project Beta screenshot placeholder" }
+      ],
+      "disciplines": ["Mobile App Development"],
+      "technologies": ["React Native", "TypeScript"],
+      "featured": {
+        "isVisible": true,
+        "role": "Your Role",
+        "heading": "Another short tagline.",
+        "description": [{ "text": "A brief description of impact, scale, or interesting technical details." }]
+      }
+    },
+    {
+      "title": "Project Gamma",
+      "slug": "project-gamma",
+      "category": "dev",
+      "externalUrl": "https://example.com/project-gamma",
+      "heading": "A third example project summary.",
+      "seoDescription": "A third example project summary for the portfolio template.",
+      "description": [{ "text": "A description of this project and the role it plays in your portfolio." }],
+      "images": [],
+      "disciplines": ["Product Design", "Web Development"],
+      "technologies": ["React", "TypeScript"],
+      "featured": {
+        "isVisible": true,
+        "role": "Your Role",
+        "heading": "A third example project summary.",
+        "description": [{ "text": "A short note about the outcome, audience, or technical angle of this work." }]
+      }
+    },
+    {
+      "title": "Project Delta",
+      "slug": "project-delta",
+      "category": "dev",
+      "externalUrl": "https://example.com/project-delta",
+      "heading": "A fourth featured project to test horizontal scrolling.",
+      "seoDescription": "A fourth featured project to test horizontal scrolling.",
+      "description": [{ "text": "A description of this project, its constraints, and what shipped." }],
+      "images": [],
+      "disciplines": ["UX Design", "Frontend Engineering"],
+      "technologies": ["React", "CSS Modules"],
+      "featured": {
+        "isVisible": true,
+        "role": "Your Role",
+        "heading": "A fourth featured project to test horizontal scrolling.",
+        "description": [{ "text": "Use this slot for another case study, experiment, or shipped product." }]
+      }
+    },
+    {
+      "title": "Project Epsilon",
+      "slug": "project-epsilon",
+      "category": "dev",
+      "externalUrl": "https://example.com/project-epsilon",
+      "heading": "A fifth project preview for the second carousel page.",
+      "seoDescription": "A fifth project preview for the second carousel page.",
+      "description": [{ "text": "A description of this project and the impact or learning it demonstrates." }],
+      "images": [],
+      "disciplines": ["Creative Technology"],
+      "technologies": ["TypeScript", "Vite"],
+      "featured": {
+        "isVisible": true,
+        "role": "Your Role",
+        "heading": "A fifth project preview for the second carousel page.",
+        "description": [{ "text": "Summarize impact, scale, collaborators, or the problem this solved." }]
+      }
+    },
+    {
+      "title": "Visual Work",
+      "slug": "visual-work",
+      "category": "visual",
+      "externalUrl": "https://example.com/visual-work",
+      "heading": "A short description of this visual project.",
+      "seoDescription": "What inspired Visual Work and how it was made.",
+      "description": [{ "text": "What inspired it and how it was made." }],
+      "images": [
+        { "src": "", "alt": "Visual Work screenshot placeholder" }
+      ],
+      "disciplines": ["Motion Design"],
+      "technologies": ["Blender", "After Effects"],
+      "featured": {
+        "isVisible": false,
+        "role": "Your Role",
+        "heading": "A short visual project tagline.",
+        "description": [{ "text": "A concise featured-project description." }]
+      }
+    }
+  ]
+}

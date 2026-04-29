@@ -1,0 +1,17 @@
+.container {
+    flex-direction: row;
+    border: 1px solid var(--color-grey-medium);
+    background-color: transparent;
+    color: var(--color-grey-light);
+    align-items: center;
+    justify-content: center;
+    padding: var(--sp-xs) var(--sp-sm);
+}
+
+.tagsContainer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+}

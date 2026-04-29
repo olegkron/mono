@@ -1,0 +1,243 @@
+:root {
+	/* ── Spacing / radius / typography (theme-invariant) ── */
+	--br-sm: 0.25rem;
+	--br-md: 0.5rem;
+	--br-lg: 1rem;
+	--br-xl: 2rem;
+	--gap-sm: 0.5rem;
+	--gap-md: 1rem;
+	--gap-lg: 2rem;
+	--sp-xs: 0.25rem;
+	--sp-sm: 0.5rem;
+	--sp-md: 1rem;
+	--sp-lg: 2rem;
+	--sp-xl: 4rem;
+
+	/* ── Layout ── */
+	--content-max-width: 450px;
+	--header-gap: 1.5625rem; /* 25px */
+
+	/* ── Type scale (additions to base h1–h6) ── */
+	--fs-eyebrow: 0.75rem;
+	--fs-name: 1.125rem;
+	--fs-project-title: 1.25rem;
+	--fw-project-title: 500;
+
+	/* ── Dark theme (default) ── */
+	--background-color: #000000;
+	--surface-color: #161616;
+	--color-primary-text: #ffffff;
+	--color-primary-dark: #8D8D8D;
+	--color-primary-light: #ff8a50;
+	--color-grey-dark: #161616;
+	--color-grey-medium: #474747;
+	--color-grey-light: #8E8E8E;
+	--header-fade-color: #000000;
+	--color-img-placeholder: #111111;
+	--color-cta-hover: #2a2a2a;
+
+	color-scheme: dark;
+	background-color: var(--background-color);
+	color: var(--color-primary-text);
+
+	font-family: 'JetBrains Mono', Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+	font-size: 16px;
+	font-synthesis: none;
+	font-weight: 400;
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+/* ── Light theme ── */
+[data-theme="light"] {
+	--background-color: #f5f5f0;
+	--surface-color: #e8e8e3;
+	--color-primary-text: #0a0a0a;
+	--color-primary-dark: #6b6b6b;
+	--color-primary-light: #e05a1a;
+	--color-grey-dark: #e8e8e3;
+	--color-grey-medium: #b0b0b0;
+	--color-grey-light: #6b6b6b;
+	--header-fade-color: #f5f5f0;
+	--color-img-placeholder: #edede8;
+	--color-cta-hover: #b0b0b0;
+
+	color-scheme: light;
+}
+
+
+body {
+	box-sizing: border-box;
+	margin: 0;
+	overflow: hidden;
+}
+
+#root {
+	height: 100dvh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scrollbar-width: none;
+}
+
+#root::-webkit-scrollbar {
+	display: none;
+}
+
+#root.homeSnap {
+	scroll-snap-type: y mandatory;
+}
+
+#root.homeSnapSmooth {
+	scroll-behavior: smooth;
+}
+
+output {
+	inset: 0;
+	pointer-events: none;
+	position: absolute;
+	white-space: pre;
+}
+
+div, header {
+	display: flex;
+	flex-direction: column;
+}
+
+
+span {
+	display: inline
+}
+
+.char {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, blockquote, pre, hr, table, fieldset {
+	margin: 0 0 0 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 2.5rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+h3 {
+	font-size: 1.75rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+h4 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+h5 {
+	font-size: 1.25rem;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+h6 {
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+p {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	/*text-align: justify;*/
+}
+
+.eyebrow {
+	color: var(--color-primary-dark);
+	font-size: 0.75rem;
+	font-weight: 400;
+	line-height: 1.5;
+	padding-bottom: 0.4rem;
+}
+
+.table {
+	display: grid;
+	/* text-align: center;
+	align-items: center; */
+	vertical-align: baseline;
+	width: 100vw;
+}
+
+a {
+	align-self: flex-start;
+	background-image: linear-gradient(currentColor, currentColor);
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	background-size: 0 1px;
+	color: var(--color-primary-text);
+	text-decoration: none;
+	transition: color 0.2s ease-in-out, transform 0.1s ease-in-out, background-size 0.2s ease-in-out;
+}
+
+.ascii-hover {
+	display: flex
+}
+
+.row {
+	flex-direction: row;
+}
+
+.char-row {
+	flex-direction: row;
+}
+
+@supports (-webkit-touch-callout: none) {
+	body {
+		height: -webkit-fill-available;
+	}
+}
+
+a:hover {
+	background-size: 100% 1px;
+	transform: translateY(-1.5px);
+}
+
+a:active {
+	transform: translateY(1.5px);
+}
+
+/* Page transition */
+@keyframes pageFadeIn {
+	from { opacity: 0; transform: translateY(6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	#root.homeSnap {
+		scroll-snap-type: none;
+	}
+
+	#root.homeSnapSmooth {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 1ms !important;
+		scroll-behavior: auto !important;
+		transition-duration: 1ms !important;
+	}
+
+	@keyframes pageFadeIn { from { opacity: 1; transform: none; } }
+}

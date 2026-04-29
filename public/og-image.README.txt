@@ -1,0 +1,2 @@
+Replace og-image.svg with your own social preview image before publishing.
+A 1200×630 PNG is recommended for production Open Graph and Twitter card meta tags.

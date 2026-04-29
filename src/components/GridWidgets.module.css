@@ -1,0 +1,175 @@
+/* ---------- Theme tokens (overridable) ---------- */
+.grid {
+	--gw-card-fg: var(--color-primary-text);
+	--gw-card-muted: var(--color-grey-light);
+	--gw-card-border: 1px solid var(--color-grey-medium);
+	--gw-card-radius: 0;
+	--gw-card-shadow: none;
+
+	display: grid;
+	grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
+	grid-auto-rows: 160px;
+	gap: 0;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 1px 0 0 1px;
+	margin-top: var(--gap-lg);
+}
+
+.grid *,
+.grid *::before,
+.grid *::after {
+	box-sizing: border-box;
+}
+
+@media (max-width: 720px) {
+	.grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+	/* Md cards stay 2 cols (full width) on small screens. */
+	.cardMd {
+		grid-column: 1 / -1 !important;
+	}
+}
+
+/* ---------- Card shell ---------- */
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 0.75rem;
+	padding: 1rem 1.1rem;
+	background: transparent;
+	color: var(--gw-card-fg);
+	border: var(--gw-card-border);
+	border-radius: var(--gw-card-radius);
+	box-shadow: var(--gw-card-shadow);
+	overflow: hidden;
+	opacity: 0;
+	margin: -1px 0 0 -1px;
+	animation: gwFallIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+	animation-delay: var(--delay, 0ms);
+}
+
+.cardFallen {
+	animation: none;
+	opacity: 1;
+}
+
+.cardSm {
+	min-height: 160px;
+}
+
+.cardMd {
+	min-height: 160px;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: space-between;
+}
+
+.cardMd .cardTop {
+	flex: 1;
+	justify-content: flex-start;
+}
+
+.cardMd .cardBottom {
+	align-self: flex-end;
+	flex-shrink: 0;
+}
+
+/* ---------- Card sections ---------- */
+.cardTop {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+	min-width: 0;
+}
+
+.cardBottom {
+	display: flex;
+}
+
+/* ---------- Typography ---------- */
+.eyebrow {
+	font-size: var(--fs-eyebrow, 0.75rem);
+	color: var(--gw-card-muted);
+	letter-spacing: 0.02em;
+}
+
+.heading {
+	margin: 0;
+	font-size: 2rem;
+	line-height: 1.05;
+	font-weight: 600;
+	color: var(--gw-card-fg);
+	overflow-wrap: anywhere;
+}
+
+.subheading {
+	margin: 0;
+	font-size: 1rem;
+	color: var(--gw-card-fg);
+	line-height: 1.5;
+}
+
+.imgPlaceholder {
+	width: 48px;
+	height: 48px;
+	background: var(--color-img-placeholder);
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.avatar {
+	width: 48px;
+	height: 48px;
+	border-radius: 0;
+	object-fit: cover;
+	display: block;
+	color: transparent;
+	font-size: 0;
+}
+
+.avatar::before {
+	display: none;
+}
+
+/* ---------- CTA button ---------- */
+.ctaButton {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 0.55rem 1rem;
+	border: none;
+	border-radius: 999px;
+	background: var(--color-grey-dark);
+	color: var(--gw-card-fg);
+	font: inherit;
+	font-weight: 500;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.ctaButton:hover {
+	background: var(--color-cta-hover);
+	transform: translateY(-2px);
+}
+
+.ctaButton:active {
+	transform: scale(0.98);
+}
+
+/* ---------- Animation ---------- */
+@keyframes gwFallIn {
+	from {
+		transform: translateY(8px) scale(0.98);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0) scale(1);
+		opacity: 1;
+	}
+}

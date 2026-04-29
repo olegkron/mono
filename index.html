@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="theme-color" content="#000000" />
+
+    <title>Your Name - Your Role</title>
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://cloud.umami.is" />
+
+    <!-- Primary meta -->
+    <meta name="description" content="A short description of who you are and what you do." />
+    <meta name="author" content="Your Name" />
+    <meta name="keywords" content="portfolio, developer, engineer" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://your-domain.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.com/" />
+    <meta property="og:title" content="Your Name - Your Role" />
+    <meta property="og:description" content="A short description of who you are and what you do." />
+    <meta property="og:image" content="https://your-domain.com/og-image.svg" />
+    <meta property="og:site_name" content="Your Name" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@yourhandle" />
+    <meta name="twitter:creator" content="@yourhandle" />
+    <meta name="twitter:url" content="https://your-domain.com/" />
+    <meta name="twitter:title" content="Your Name - Your Role" />
+    <meta name="twitter:description" content="A short description of who you are and what you do." />
+    <meta name="twitter:image" content="https://your-domain.com/og-image.svg" />
+
+    <!-- Structured data: Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Your Name",
+      "url": "https://your-domain.com",
+      "jobTitle": " - Your Role",
+      "sameAs": [
+        "https://x.com/yourhandle",
+        "https://github.com/yourhandle",
+        "https://linkedin.com/in/yourhandle"
+      ],
+      "description": "A short description of who you are and what you do."
+    }
+    </script>
+
+    <!-- Analytics (deferred) - set VITE_ANALYTICS_ID in .env.local -->
+    <script>
+      var _aid = '%VITE_ANALYTICS_ID%';
+      if (_aid && _aid !== '%VITE_ANALYTICS_ID%') {
+        window.addEventListener('load', function() {
+          var s = document.createElement('script');
+          s.src = 'https://cloud.umami.is/script.js';
+          s.setAttribute('data-website-id', _aid);
+          document.head.appendChild(s);
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="/src/main.tsx" type="module"></script>
+  </body>
+</html>

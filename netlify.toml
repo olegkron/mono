@@ -1,0 +1,64 @@
+[build]
+  command = "vite build"
+  publish = "dist"
+
+# SPA fallback — required for React Router client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security + SEO headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# HTML — no cache (always fresh for crawlers)
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Sitemap + robots — short cache so updates propagate quickly
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Hashed JS/CSS bundles — immutable long-term cache
+[[headers]]
+  for = "/assets/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Fonts — long-term cache
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Project images — moderate cache
+[[headers]]
+  for = "/assets/projects/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Videos — moderate cache
+[[headers]]
+  for = "/assets/projects/*.mp4"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

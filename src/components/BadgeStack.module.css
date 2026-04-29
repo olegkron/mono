@@ -1,0 +1,80 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  position: sticky;
+  top: 6rem;
+  align-self: flex-start;
+}
+
+.stack {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardHidden {
+  position: absolute;
+  width: var(--card-size, 50%);
+  height: var(--card-size, 50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card {
+  position: absolute;
+  width: var(--card-size, 50%);
+  height: var(--card-size, 50%);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+
+  transform: translate(var(--tx), var(--ty)) rotate(var(--rot)) scale(2.2);
+  opacity: 0;
+
+  animation: fallIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+@keyframes fallIn {
+  from {
+    transform: translate(var(--tx), var(--ty)) rotate(var(--rot)) scale(2.2);
+    opacity: 0;
+  }
+  to {
+    transform: translate(var(--tx), var(--ty)) rotate(var(--rot)) scale(1);
+    opacity: 1;
+  }
+}
+
+.dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 0 4px;
+  flex-shrink: 0;
+}
+
+.dot,
+.dotActive {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dot {
+  background: var(--color-grey-medium, #474747);
+}
+
+.dotActive {
+  background: var(--color-primary-text, #fff);
+}
