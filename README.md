@@ -1,7 +1,20 @@
-# Portfolio Template
+# MONO – Portfolio Template
 
-A minimal, fast personal portfolio built with React, TypeScript, and Vite.
+A minimal personal portfolio website with custom home screen widgets.
 
+Built with React, TypeScript, and Vite.
+
+  <table>
+    <tr>
+      <td><img width="358" alt="1-homepage"
+  src="https://github.com/user-attachments/assets/a7c7d882-20d5-4ac7-b698-534a283dbb18" /></td>
+      <td><img width="358" alt="2-projects"
+  src="https://github.com/user-attachments/assets/94d5e198-7226-4df0-b6a4-63b577532703" /></td>
+      <td><img width="358" alt="3-project-details"
+  src="https://github.com/user-attachments/assets/2396e8d0-edbc-4e98-8c9c-190287e01816" /></td>
+    </tr>
+  </table>
+  
 ## Quick Start
 
 ```bash
